@@ -1,0 +1,75 @@
+
+/*variables:*/
+
+:root {
+    --violet: #7541c8;
+    --grayish-blue: #48556a;
+    --blackies-blue: #19212e;
+    --white: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #cfcfcf;
+}
+
+#testimonial1 {
+    background-color: var(--violet);
+    color: var(--white);
+}
+
+#testimonial2 {
+    background-color: var(--grayish-blue);
+    color: var(--white); 
+}
+
+#testimonial3 {
+    background-color: var(--white);
+}
+
+#testimonial4 {
+    background-color: var(--blackies-blue);
+    color: var(--white);
+}
+
+#testimonial5 {
+    background-color: var(--white);
+}
+
+.grid_item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.testimonial-grid-container{
+    padding: 5% 3%; /*alto, ancho*/
+}
+/*max-width: Se aplica a pantallas con tamaño <= al definido
+  min-width: Se aplica a pantallas con tamaño >= al definido
+*/
+@media (min-width: 576px){
+    .testimonial-grid-container,  #top-container, #top-bottom{
+        display: flex;
+    }
+    
+    #testimonial1, #testimonial4{
+        flex-basis: 65%;
+    }
+
+    #testimonial2, #testimonial3{
+        flex-basis: 35%;
+    }
+
+    #testimonial5{
+        flex-basis: 35%;
+    }
+
+    .grid_item {
+        margin-right: 20px;
+    }
+}
